@@ -1,19 +1,16 @@
 import mongoose from 'mongoose';
 
-mongoose.connect('mongodb://root:12345@localhost:27017/ecommerce');
+mongoose.connect('mongodb://localhost:27017/ecommerce');
 
 const Schema = mongoose.Schema;
-const ObjectId = Schema.Types.ObjectId;
 
 const mensajes = new Schema({
-  _id: ObjectId,
   author: String,
   text: String,
-  time: Date,
+  time: String,
 });
 
 const productos = new Schema({
-  _id: ObjectId,
   title: String,
   price: Number,
   thumbnail: String,

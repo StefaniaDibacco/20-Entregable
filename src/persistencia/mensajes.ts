@@ -37,7 +37,6 @@ class Mensajes {
         text,
         time,
       };
-      // mensajes.push(mensajeNuevo);
       const nuevoMensaje = new _mensajes(mensajeNuevo);
       return await nuevoMensaje.save();
     } catch (error) {
